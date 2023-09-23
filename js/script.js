@@ -17,30 +17,32 @@ window.onscroll = () => {
     navbar.classList.remove('open');
 }
 
-const swiper = new Swiper('.reviews-slider', {
-    spaceBetween: 20,
+const swiper = new Swiper('.testimonial', {
+    slidesPerView: 3,
+    spaceBetween: 30,
     grabCursor: true,
     loop: true,
     
     pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         clickable: true,
     },
 
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+        clickable: true,
       },
 
-    breakpoint: {
+    breakpoints: {
         540: {
-            slidePerView: 1,
+          slidesPerView: 1,
         },
         768: {
-            slidePerView: 2,
+          slidesPerView: 2,
         },
         1024: {
-            slidePerView: 3,
+          slidesPerView: 3,
         },
-    },
+      },
 });

@@ -1,11 +1,144 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 13</title>
+
+<!-- template stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+<!-- font stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<!-- icon font stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<!-- link swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 
 <body>
+<!-- start header -->
+<header class="sticky">
+    <a href="#" class="logo">
+        <img src="img/logo.png" alt="">
+    </a>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="header-icons">
+        <a href="#"><i class='bx bxs-user'></i></a>
+        <a href="#"><i class='bx bx-heart'></i></a>
+        <a href="#"><i class='bx bx-cart'></i></a>
+        <a href="#"><i class="bx bx-menu" id="menu-icon"></i></a>
+    </div>
+</header>
+<!-- end header -->
+
+<!-- start home section -->
+<section class="home" id="home" > 
+    <div class="home-text"> 
+       <h6>Greatest online learning platform</h6>
+       <h1>Accessible Online Course For All</h1>
+       <P>Own your future learning new skills online</P>
+       <div class="latter">
+           <form>
+               <input type="email" placeholder="Write Your Email" required>
+               <input type="submit" value="Let's Start" required>
+           </form>
+       </div>
+    </div>
+    
+    <div class="home-img">
+       <img src="img/home.png"> 
+    </div>
+</section>
+<!-- end home section -->
+
+<!-- start container section -->
+<section class="container">
+    <div class="container-box">
+        <i class='bx bxs-graduation'></i>
+        <div class="container-text">
+            <h4>5k</h4>
+            <p>Online Course</p>
+        </div>
+    </div>
+
+    <div class="container-box">
+        <i class='bx bxs-graduation'></i>
+        <div class="container-text">
+            <h4>5k</h4>
+            <p>Online Course</p>
+        </div>
+    </div>
+
+    <div class="container-box">
+        <i class='bx bxs-graduation'></i>
+        <div class="container-text">
+            <h4>5k</h4>
+            <p>Online Course</p>
+        </div>
+    </div>
+
+    <div class="container-box">
+        <i class='bx bxs-graduation'></i>
+        <div class="container-text">
+            <h4>5k</h4>
+            <p>Online Course</p>
+        </div>
+    </div>
+</section>
+<!-- end container section -->
+
+<!-- start categories section -->
+<section class="categories" id="categories">
+    <div class="center-text">
+        <h5>Categories</h5>
+        <h2>Popular Categories</h2>
+    </div>
+
+    <div class="categories-content">
+        <div class="box">
+            <img src="img/literature.png">
+            <h3>Data Analytics</h3>
+            <p>5 course</p>
+        </div>
+
+        <div class="box">
+            <img src="img/idea.png">
+            <h3>UI/UX Designer</h3>
+            <p>5 course</p>
+        </div>
+
+        <div class="box">
+            <img src="img/translator.png">
+            <h3>Digital Marketing</h3>
+            <p>5 course</p>
+        </div>
+
+        <div class="box">
+            <img src="img/study.png">
+            <h3>Website Development</h3>
+            <p>5 course</p>
+        </div>
+    </div>
+    <div class="main-btn">
+        <a href="#" class="btn">All Categories</a>
+    </div>
+</section>
+<!-- end categories section -->
+
 <!-- start course section -->
 <section class="courses" id="courses">
     <div class="center-text">
@@ -142,21 +275,21 @@
     </div>
 
     <div class="main-btn">
-        <a href="#" class="btn">Join Class Now</a>
+        <a href="#" class="btn">More Class</a>
     </div>
 </section>
 <!-- end course section -->
 
-<!-- start review section -->
-<section class="reviews" id="reviews">
+<!-- start testimonial section -->
+<section class="testi" id="testi">
     <div class="center-text">
         <h5>REVIEW</h5>
         <h2>Our Students Say...</h2>
     </div>
-    <div class="swiper reviews-slider">
+
+    <div class="swiper testimonial">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slide">
-                <p>Materi dibuat berdasarkan case yang sering dihadapi di dunia pekerjaan. Sehingga potensinya besar untuk kamu semua yang mencoba belajar hal baru.</p>
+            <div class="swiper-slide card">
                 <div class="user">
                     <img src="img/student1.png">
                     <div class="user-info">
@@ -170,10 +303,10 @@
                         </div>
                     </div>
                 </div>
+                <p>Materi dibuat berdasarkan case yang sering dihadapi di dunia pekerjaan. Sehingga potensinya besar untuk kamu semua yang mencoba belajar hal baru.</p>
             </div>
 
-            <div class="swiper-slide slide">
-                <p>Kelasnya super intensive dan interactive, kurikulumnya rapi, mentornya & bisa menggapai semua.</p>
+            <div class="swiper-slide card">
                 <div class="user">
                     <img src="img/student2.png">
                     <div class="user-info">
@@ -187,10 +320,10 @@
                         </div>
                     </div>
                 </div>
+                <p>Kelasnya super intensive dan interactive, kurikulumnya rapi, mentornya & bisa menggapai semua.</p>
             </div>
 
-            <div class="swiper-slide slide">
-                <p>So insighful dan materi yang super berbobot ini dijelaskan dengan ringan.</p>
+            <div class="swiper-slide card">
                 <div class="user">
                     <img src="img/student3.png">
                     <div class="user-info">
@@ -204,10 +337,10 @@
                         </div>
                     </div>
                 </div>
+                <p>So insighful dan materi yang super berbobot ini dijelaskan dengan ringan. Hightlight yang penting disampaikan berulang kali.</p>
             </div>
 
-            <div class="swiper-slide slide">
-                <p>Penyampaiannya jelas, hightlight yang penting disampaikan berulang kali. Penjelasannya dengan contoh real, jadi bisa dibayangkan secara langsung.</p>
+            <div class="swiper-slide card">
                 <div class="user">
                     <img src="img/student4.png">
                     <div class="user-info">
@@ -221,10 +354,10 @@
                         </div>
                     </div>
                 </div>
+                <p>Penyampaiannya jelas, penjelasannya dengan contoh real, jadi bisa dibayangkan secara langsung.</p>
             </div>
 
-            <div class="swiper-slide slide">
-                <p>Gabung Belyuk jadi salah satu keputusan terbaik karna delain module dan ilmunya dapet, networking juga dapet.</p>
+            <div class="swiper-slide card">
                 <div class="user">
                     <img src="img/student5.png">
                     <div class="user-info">
@@ -238,10 +371,10 @@
                         </div>
                     </div>
                 </div>
+                <p>Gabung BelYuk jadi salah satu keputusan terbaik karna delain module dan ilmunya dapet, networking juga dapet.</p>
             </div>
 
-            <div class="swiper-slide slide">
-                <p>Belyuk ga ada lawan! Lengkap banget materinya. Khusus buat yang niat dan serius.</p>
+            <div class="swiper-slide card">
                 <div class="user">
                     <img src="img/student6.png">
                     <div class="user-info">
@@ -255,12 +388,15 @@
                         </div>
                     </div>
                 </div>
+                <p>Belyuk ga ada lawan! Lengkap banget materinya. Khusus buat yang niat dan serius.</p>
             </div>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swpr-btn"></div>
+        <div class="swiper-button-next swpr-btn"></div>
     </div>
 </section>
-<!-- end review section -->
+<!-- end testimonial section -->
 
 <!-- start cta section -->
 <section class="cta">
@@ -304,61 +440,68 @@
     </div>
 
     <div class="about-text">
-        <h2>Want to share your knowledge? Join us a Mentor</h2>
-        <p>If <span style="color: #f66962;">experience</span> is <span style="color: #f66962;">the best teacher</span>,<br>then <span style="color: #f66962;">being a teacher</span> is <span style="color: #f66962;">the best experience</span> <br> <br>
-            I BELIEVE IN YOU.<br>BELIEVE IN YOUY SELF!<br>BE POSITIVE.</p>
-        <h4>Best Course</h4>
-        <h5>Top rated Instructors</h5>
-        <a href="#" class="btn">Read More</a>
+        <h5>About Us</h5>
+        <h2>This is BelYuk</h2>
+        <p>Belyuk is a professional skills development platform with more than 1 million users throughout Indonesia. BelYuk believes that everyone will become a better version by continuing to learn.</p>
+        <p>BELIEVE IN YOU<br>BELIEVE IN YOUR SELF<br>BE POSITIVE</p>
+        <h4><i class="fa-regular fa-circle-check"></i> Best Course</h4>
+        <h4><i class="fa-regular fa-circle-check"></i> Top Rated Instructors</h4>
+        <h4><i class="fa-regular fa-circle-check"></i> Opportunities for Networking</h4>
+        <div class="main-btn">
+            <a href="#" class="btn">Join Class Now</a>
+        </div>
     </div>
 </section>
 <!-- end about section -->
 
-<!-- start contact section -->
-<section class="contact" id="contact">
-    <div class="main-contact">
-        <div class="contact-content">
+<!-- start footer -->
+<section class="footer" id="footer">
+    <div class="main-footer">
+        <div class="footer-content">
             <img src="img/logo.png">
              <div class="sosmed">
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
              </div>
         </div>
 
-        <div class="contact-content">
+        <div class="footer-content">
+            <h4 class="text-footer">Quick Link</h4>
             <li><a href="#home">Home</a></li>
             <li><a href="#categories">Categories</a></li>
             <li><a href="#courses">Courses</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
         </div>
 
-        <div class="contact-content">
+        <div class="footer-content">
+            <h4 class="text-footer">Others</h4>
             <li><a href="#">Profil</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">Register</a></li>
-            <li><a href="#">Instructor</a></li>
             <li><a href="#">Dashboard</a></li>
         </div>
 
-        <div class="contact-content">
-            <li><a href="#">Balikpapan,<br> Indonesia, 76111</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="#">admission@belyuk.co</a></li>
-            <li><i class="fa-solid fa-phone"></i><a href="#">(0542) – 421 113</a></li>
+        <div class="footer-content">
+            <h4 class="text-footer">Contact</h4>
+            <p><i class="fa fa-map-marker-alt me-3"></i>Balikpapan, Indonesia, 76111</p>
+            <p><i class="fa-solid fa-envelope"></i>admission@belyuk.co</p>
+            <p><i class="fa-solid fa-phone"></i>(0542) – 421 113</p>
         </div>
     </div>
 </section>
-<!-- end contact section -->
+<!-- end footer -->
 
+<!-- copyright -->
 <div class="last-text">
     <p>©2023 Group 13 RevoU Capstone. All right reserved</p>
 </div>
 
-<!-- swiper js link -->
+<!-- link swiper js -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<!-- custon js file link -->
-<script src="./js/script.js"></script>
+<!-- template js file link -->
+<script src="js/script.js"></script>
 </body>
 </html>
