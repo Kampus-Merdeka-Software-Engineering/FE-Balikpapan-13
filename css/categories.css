@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* header */
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #ffCC70, #fff);
+    padding: 23px 8%;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 10%);
+    transition: all.40s ease;
+}
+.logo img{
+    height: auto;
+    width: 100px;
+    max-width: 100%;
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: #052030;
+    font-weight: 600; 
+    font-size: 1.1rem;
+    padding: 10px 22px;
+    transition: all .40s ease;
+}
+.navbar a:hover{
+    color: #fff;
+}
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+.header-icons i{
+    margin-left: 10px;
+    font-size: 24px;
+    color: #052030;
+    margin-right: 15px;
+}
+.header-icons a:hover{
+    transform: scale(1.2);
+}
+#menu-icon{
+    font-size: 24px;
+    color: #052030;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* overview section */
+.categories-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4% 8%;
+}
+.categories-inner h3{
+    padding: 35px 0 25px 0;
+}
+.categories-inner p{
+    color: #696969;
+}
+.categories-inner hr{
+    height: 1px;
+    background: rgba(236, 226, 229, 0.5);
+    margin-top: 40px;
+}
+
+.categories-inner .overview{
+    width: 70%;
+}
+.categories-inner .overview img{
+    width: 90%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.categories-inner .overview .categories-head{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.categories-inner .overview .categories-head .c-name{
+    width: 70%;
+}
+.categories-inner .overview .categories-head .c-name .star{
+    margin: 6px 0 24px 0;
+}
+.categories-inner .overview .categories-head .c-name .star i{
+    color: #f66962;
+    font-size: 0.9rem;
+}
+.categories-inner .overview .categories-head .c-name p{
+    font-size: 15px;
+}
+.categories-inner .overview .categories-head span{
+    padding: 16px 22px;
+    border-radius: 5px;
+    color: #f66962;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(88, 56, 252, 0.1);
+}
+
+.categories-inner .learn p{
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.categories-inner .learn p i{
+    color: #f66962;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.enroll{
+    width: 300px;
+    padding: 0 30px 30px 30px;
+    border-radius: 11px;
+    box-shadow: 0px 20px 40px 0 rgb(11 2 55 / 8%);
+}
+.enroll h3{
+    padding-bottom: 10px;
+}
+.enroll p{
+    font-size: 15px;
+    color: #696969;
+    margin: 15px 0;
+}
+.enroll p i{
+    color: #f66962;
+    font-weight: 500;
+    margin-right: 18px;  
+}
+
+.main-btn{
+    padding: 25px 0 20px 0;
+    margin: auto;
+    text-align: center;
+}
+.btn{
+    display: inline;
+    padding: 16px 30px;
+    font-weight: 700;
+    background: #f66962;
+    color: #fff;
+    border-radius: 30px;
+    transition: all .40s ease;
+}
+.btn:hover{
+    transform: scale(0.9) translateY(-5px);
+}
+
+/* footer */
+.footer{
+    padding: 60px 8%;
+    background: #ffCC70;
+}
+.main-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+.text-footer{
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.footer-content img{
+    height: auto;
+    width: 160px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.footer-content li{
+    margin-bottom: 18px;
+}
+.footer-content li a{
+    display: block;
+    color: #052030;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .40s ease;
+}
+.footer-content li a:hover{
+    transform: translateX(10px);
+    color: #fff;
+}
+.footer-content p i{
+    font-size: 15px;
+    color: #052030;
+    margin: 0 15px 15px 0;
+}
+.sosmed{
+    display: flex;
+    position: relative;
+    margin-bottom: 18px;
+}
+.sosmed a{
+    font-size: 30px;
+    color: #052030;
+    margin: 0 10px;
+    transition: all .40s ease;
+}
+.sosmed a:hover{
+    color: #fff;
+}
+
+/* copyright */
+.last-text p{
+    text-align: center;
+    padding: 18px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #ffCC70;
+}
+
+/* responsive css */
+@media (max-width: 1410px) {
+    header{
+        padding: 10px 4%;
+        transition: .2s; 
+    }
+    header.sticky{
+        padding: 12px 4%;
+        transition: .2s;
+    }
+    section{
+        padding: 70px 4%;
+        transition: .2s;
+    }
+    .footer{
+        padding: 60px 4%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1024px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 110vh;
+        background: #ffCC70;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 170px 30px;
+        transition: all .40s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 1.3rem 0;
+        color: #052030;
+    }
+    .narbar a:hover{
+        color: #fff;
+        transform: translateY(-5px);
+    }
+    .navbar.open{
+        right: 0;
+    }
+}
+
+@media (max-width:769px) {
+    .categories-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 8% 4%;
+    }
+    .categories-inner .overview{
+        width: 100%;
+    }
+    .categories-inner .overview img{
+        width: 100%;
+        height: 100%;
+    }
+    .enroll{
+        margin-top: 25px;
+    }
+}
+
+@media (max-width:475px) {
+    .categories-inner .overview .categories-head .c-name{
+        width: 50%;
+    }
+    .categories-inner .overview .categories-head .c-name h2{
+        font-size: 22px;
+    }
+    .categories-inner .overview .categories-head span{
+        font-size: 22px;
+    }
+    .enroll{
+        width: 100%;
+    }
+}

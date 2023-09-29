@@ -24,7 +24,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(180deg, #ffCC70, #fff);
-    padding: 23px 13%;
+    padding: 23px 8%;
     box-shadow: 0px 4px 15px rgb(0 0 0 / 10%);
     transition: all.40s ease;
 }
@@ -70,7 +70,7 @@ header{
 
 /* home section */
 section{
-    padding: 80px 13%; /* menyesuaikan device */
+    padding: 80px; /* menyesuaikan device */
 }
 .home{
     position: relative;
@@ -135,10 +135,10 @@ section{
 .container{
     padding: 70px 11%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 1.5rem;
     align-items: center;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .container-box{
     display: flex;
@@ -150,9 +150,9 @@ section{
     box-shadow: -11.729px -11.729px 32px rgb(255 255 255 / 15%);
     transition: all .40s ease;
 }
-.container-box:hover{
+/* .container-box:hover{
     transform: translate(-15px);
-}
+} */
 .container-box i{
     font-size: 36px;
 }
@@ -330,7 +330,7 @@ section{
 }
 
 .testimonial .card{
-    max-width: 20rem;
+    min-width: 20rem;
     height: 24rem;
     border-radius: 2rem;
     background-color: #ffCC70;
@@ -415,7 +415,7 @@ section{
 
 /* footer */
 .footer{
-    padding: 60px 13%;
+    padding: 60px 8%;
     background: #ffCC70;
 }
 .main-footer{
@@ -480,23 +480,23 @@ section{
 /* responsive css */
 @media (max-width: 1410px) {
     header{
-        padding: 10px 3%;
+        padding: 10px 4%;
         transition: .2s; 
     }
     header.sticky{
-        padding: 12px 3%;
+        padding: 12px 4%;
         transition: .2s;
     }
     section{
-        padding: 70px 3%;
+        padding: 70px 4%;
         transition: .2s;
     }
     .container{
-        padding: 70px 3%;
+        padding: 70px 4%;
         transition: .2s;
     }
-    .contact{
-        padding: 60px 3%;
+    .footer{
+        padding: 60px 4%;
         transition: .2s;
     }
 }
