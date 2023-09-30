@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* header */
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #ffCC70, #fff);
+    padding: 23px 8%;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 10%);
+    transition: all.40s ease;
+}
+.logo img{
+    height: auto;
+    width: 100px;
+    max-width: 100%;
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: #052030;
+    font-weight: 600; 
+    font-size: 1.1rem;
+    padding: 10px 22px;
+    transition: all .40s ease;
+}
+.navbar a:hover{
+    color: #fff;
+}
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+.header-icons i{
+    margin-left: 10px;
+    font-size: 24px;
+    color: #052030;
+    margin-right: 15px;
+}
+.header-icons a:hover{
+    transform: scale(1.2);
+}
+#menu-icon{
+    font-size: 24px;
+    color: #052030;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* playlist */
+.container{
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 2rem;
+    padding: 80px;
+}
+
+.main-video, .video-playlist{
+    width: 100%;
+    height: 30rem;
+}
+.main-video .title{
+    margin-top: 1rem;
+}
+.main-video video{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.video-playlist .title{
+    padding-left: 1rem;
+}
+.video-playlist > p{
+    padding: 1rem;
+    color: #696969;
+}
+.video-playlist .videos{
+    height: 70%;
+    overflow-y: auto;
+}
+.video-playlist .videos::-webkit-scrollbar{
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: #696969;
+}
+.video-playlist .videos::-webkit-scrollbar-thumb{
+    border-radius: .4rem;
+    background-color: #ffCC70;
+}
+.video-playlist .videos .video{
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: .1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+.video-playlist .videos .video:hover{
+    background-color: #ffCC70;
+    color: #fff;
+}
+.video-playlist .videos .video.active{
+    background-color: #ffCC70;
+    color: #fff;
+}
+
+.video img{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.video-playlist .videos .video:hover img{
+    filter: invert(100%);
+}
+.video-playlist .videos .video.active img{
+    filter: invert(100%);
+}
+.video p{
+    margin-left: 48px;
+}
+.video h3{
+    width: 20rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    padding: 0 .5rem;
+}
+
+/* footer */
+.footer{
+    padding: 60px 8%;
+    background: #ffCC70;
+}
+.main-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+.text-footer{
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.footer-content img{
+    height: auto;
+    width: 160px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.footer-content li{
+    margin-bottom: 18px;
+}
+.footer-content li a{
+    display: block;
+    color: #052030;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .40s ease;
+}
+.footer-content li a:hover{
+    transform: translateX(10px);
+    color: #fff;
+}
+.footer-content p i{
+    font-size: 15px;
+    color: #052030;
+    margin: 0 15px 15px 0;
+}
+.sosmed{
+    display: flex;
+    position: relative;
+    margin-bottom: 18px;
+}
+.sosmed a{
+    font-size: 30px;
+    color: #052030;
+    margin: 0 10px;
+    transition: all .40s ease;
+}
+.sosmed a:hover{
+    color: #fff;
+}
+
+/* copyright */
+.last-text p{
+    text-align: center;
+    padding: 18px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #ffCC70;
+}
+
+/* responsive css */
+@media (max-width: 1410px) {
+    header{
+        padding: 10px 4%;
+        transition: .2s; 
+    }
+    header.sticky{
+        padding: 12px 4%;
+        transition: .2s;
+    }
+    section{
+        padding: 70px 4%;
+        transition: .2s;
+    }
+    .footer{
+        padding: 60px 4%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1024px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 110vh;
+        background: #ffCC70;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 170px 30px;
+        transition: all .40s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 1.3rem 0;
+        color: #052030;
+    }
+    .narbar a:hover{
+        color: #fff;
+        transform: translateY(-5px);
+    }
+    .navbar.open{
+        right: 0;
+    }
+}
+
+@media (max-width: 890px) {
+    .container{
+        display: block;
+    }
+    .main-video, .video-playlist{
+        height: auto;
+    }
+    .main-video h3{
+        margin-bottom: 2rem;
+    }
+    .video h3{
+         width: 28rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+        padding: 4%;
+    }
+}
