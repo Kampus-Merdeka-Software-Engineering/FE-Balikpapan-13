@@ -126,7 +126,7 @@ section{
     top: 2px;
     right: 1px;
 }
-.home-img i{
+.home-img img{
     height: auto;
     width: 100%;
 }
@@ -502,8 +502,8 @@ section{
 }
 
 @media (max-width: 1050px) {
-    .root{
-        --big-font: 3.2rem;
+    :root{
+        --big-font: 3rem;
         --h2-font: 2rem;
         --p-font: 1rem;
         transition: .1s; 

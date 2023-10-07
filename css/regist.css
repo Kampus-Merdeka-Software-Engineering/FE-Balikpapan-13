@@ -1,0 +1,80 @@
+/* CSS untuk style formulir pendaftaran */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: url(../img/bg\ 4.jpg);
+}
+
+.contact {
+    display: flex;
+}
+
+.heading {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.registration-form {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.499);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group .radio input[type="radio"], .form-group .radio label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: #ebf0f4;
+    color: #121111;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #00a7b3;
+}
