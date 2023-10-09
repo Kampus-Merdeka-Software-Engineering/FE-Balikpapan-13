@@ -21,7 +21,7 @@ const keyValue = window.location.search;
 const urlParam = new URLSearchParams(keyValue);
 const param = urlParam.get('id_course');
 
-const dbVidio = `http://localhost:3000/vidio/${param}`;
+const dbVidio = `https://be-balikpapan-13-production.up.railway.app/vidio/${param}`;
 
 fetch(dbVidio)
     .then((res) => res.json())
