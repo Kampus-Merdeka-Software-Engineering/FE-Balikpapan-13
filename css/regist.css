@@ -77,4 +77,39 @@ select {
 
 .btn:hover {
     background-color: #00a7b3;
+} 
+
+/* responsive css */
+@media screen and (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .image img {
+        flex: 100%;
+        max-width: 80%; 
+        top: 0px;
+        left: 50px;
+        z-index: 12;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        display: block;
+        transform: translateY(-20px);
+    }
+
+    .registration-form {
+        flex: 100%;
+        width: 80%;
+        position: relative;
+        z-index: 1;
+        transform: translateY(-50px);
+        margin-bottom: 40px;
+    }
+
+    .heading {
+       margin-top: 80px;
+       font-size: 50px;
+    }
 }

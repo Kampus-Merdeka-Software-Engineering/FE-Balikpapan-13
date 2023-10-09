@@ -17,60 +17,56 @@ window.onscroll = () => {
     navbar.classList.remove('open');
 }
 
-const main_video = document.querySelector('.main-video video');
-const main_video_title = document.querySelector('.main-video .title');
-const video_playlist = document.querySelector('.video-playlist .videos');
+const keyValue = window.location.search;
+const urlParam = new URLSearchParams(keyValue);
+const param = urlParam.get('id_course');
 
-let data = [
-    {
-        'id': 'a1',
-        'title': 'Mengenal Komponen Pembentuk Brand',
-        'name': 'footage1.mp4',
-        'duration': '2:47',
-    },
-    {
-        'id': 'a2',
-        'title': 'Strategi Komunikasi Brand',
-        'name': 'footage5.mp4',
-        'duration': '2:45',
-    },
-    {
-        'id': 'a3',
-        'title': 'Merancang Brand Activation',
-        'name': 'footage1.mp4',
-        'duration': '2:47',
-    },
-];
+const dbVidio = `http://localhost:3000/vidio/${param}`;
 
-data.forEach((video, i)=> {
-    let video_element = `
-        <div class="video" data-id="${video.id}">
-            <img src="img/circle-play-solid.svg">
-            <p>${i + 1}. </p>
-            <h3 class="title">${video.title}</h3>
-            <p class="time">${video.duration}</p>
-        </div>
-    `;
-    video_playlist.innerHTML += video_element;
-})
+fetch(dbVidio)
+    .then((res) => res.json())
+    .then((vidios) => {
+        //menampilkan playlist materi
+        let listVidio = "";
 
-let videos = document.querySelectorAll('.video');
-videos[0].classList.add('active');
-videos[0].querySelector('img').src = 'img/circle-pause-solid.svg';
-
-videos.forEach(selected_video => {
-    selected_video.onclick = () => {
-
-        for(all_video of videos) {
-            all_video.classList.remove('active');
-            all_video.querySelector('img').src = 'img/circle-play-solid.svg';
-        }
-
-        selected_video.classList.add('active');
-        selected_video.querySelector('img').src = 'img/circle-pause-solid.svg';
+        vidios.forEach((vidio, i) => {
+            listVidio += `
+            <div class="video" id="${vidio.id_vidio}">
+                <img src="img/circle-play-solid.svg">
+                <p>${i + 1}. </p>
+                <h3 class="title">${vidio.nama_vidio}</h3>
+                <p class="time">${vidio.duration}</p>
+            </div>
+    `;})
     
-        let match_video = data.find(video => video.id == selected_video.dataset.id);
-        main_video.src = 'videos/' + match_video.name;
-        main_video_title.innerHTML = match_video.title;
-    }
+    document.querySelector('.video-playlist .videos').innerHTML = listVidio;
+
+    let videos = document.querySelectorAll('.video');
+    console.log(videos)
+    videos[0].classList.add('active');
+    videos[0].querySelector('img').src = 'img/circle-pause-solid.svg';
+    
+    videos.forEach(selected_video => {
+        selected_video.onclick = () => {
+    
+            for(all_video of videos) {
+                all_video.classList.remove('active');
+                all_video.querySelector('img').src = 'img/circle-play-solid.svg';
+            }
+    
+            selected_video.classList.add('active');
+            selected_video.querySelector('img').src = 'img/circle-pause-solid.svg';
+        
+            // let match_video = vidios.find(vidio => vidio.id_vidio == selected_video.dataset.id);
+            // document.querySelector('.main-video video').src = `match_video${vidio.link_vidio}`;
+            // document.querySelector('.main-video .title').innerHTML = `match_video${vidio.nama_vidio}`;
+
+            if(videos.classList.contains('active')){
+                let text = `${i}`;
+            };
+        };
+
+});
+
+
 });
