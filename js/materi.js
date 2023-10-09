@@ -42,7 +42,6 @@ fetch(dbVidio)
     document.querySelector('.video-playlist .videos').innerHTML = listVidio;
 
     let videos = document.querySelectorAll('.video');
-    console.log(videos)
     videos[0].classList.add('active');
     videos[0].querySelector('img').src = 'img/circle-pause-solid.svg';
     
@@ -59,8 +58,8 @@ fetch(dbVidio)
         
             let selectedVideoId = selected_video.getAttribute('id');
             let match_video = vidios.find(vidio => vidio.id_vidio == selectedVideoId);
-            document.querySelector('.main-video video').src = `match_video${match_video.link_vidio}`;
-            document.querySelector('.main-video .title').innerHTML = `match_video${match_video.nama_vidio}`;
+            document.querySelector('.main-video video').src = `${match_video.link_vidio}`;
+            document.querySelector('.main-video .title').innerHTML = `${match_video.nama_vidio}`;
 
         };
 
