@@ -57,13 +57,11 @@ fetch(dbVidio)
             selected_video.classList.add('active');
             selected_video.querySelector('img').src = 'img/circle-pause-solid.svg';
         
-            // let match_video = vidios.find(vidio => vidio.id_vidio == selected_video.dataset.id);
-            // document.querySelector('.main-video video').src = `match_video${vidio.link_vidio}`;
-            // document.querySelector('.main-video .title').innerHTML = `match_video${vidio.nama_vidio}`;
+            let selectedVideoId = selected_video.getAttribute('id');
+            let match_video = vidios.find(vidio => vidio.id_vidio == selectedVideoId);
+            document.querySelector('.main-video video').src = `match_video${match_video.link_vidio}`;
+            document.querySelector('.main-video .title').innerHTML = `match_video${match_video.nama_vidio}`;
 
-            if(videos.classList.contains('active')){
-                let text = `${i}`;
-            };
         };
 
 });
